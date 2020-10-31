@@ -32,15 +32,15 @@ export default function CreatePost() {
     }
 
     return(
-        <div className="container">
+        <div className="form-container">
             <h1>Create Post</h1>
             <form onSubmit={addPost}>
                 <div className="form-group">
-                    <label for="title-input">Title: </label>
+                    <label htmlFor="title-input">Title: </label>
                     <input required className="form-control" id="title-input" type="text" name="title" value={postValues.title} onChange={handleNewInput}/>
                 </div>
                 <div className="form-group">
-                    <label for="content-input">Content: </label>
+                    <label htmlFor="content-input">Content: </label>
                     <textarea required className="form-control" rows="3" id="content-input" name="content" value={postValues.content} onChange={handleNewInput}/>
                 </div>
                 <div className="form-group">

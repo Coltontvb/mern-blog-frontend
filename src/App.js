@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 //*** Custom Components ***//
 import Navbar from './components/navbar';

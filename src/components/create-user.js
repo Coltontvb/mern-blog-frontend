@@ -32,7 +32,7 @@ export default function CreateUser() {
 
     
         return(
-            <div className="container">
+            <div className="form-container">
                 <h1>Create User</h1>
                 <form onSubmit={addUser}>
                 <div className="form-group">
