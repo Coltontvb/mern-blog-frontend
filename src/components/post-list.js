@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Post from './show-post';
 
 export default function PostList(){
