@@ -4,7 +4,9 @@ import React, { useState } from "react";
 export default function CreateUser() {
     //State of form inputs
     const [userValues, setUserValues] = useState({
-        username: ""
+        username: "",
+        email: "",
+        password: ""
     });
     //Handle input as it changes saving every change to any input
     function handleNewInput(e) {
@@ -38,6 +40,14 @@ export default function CreateUser() {
                 <div className="form-group">
                     <label>username: </label>
                     <input required type="text" name="username" value={userValues.username} onChange={handleNewInput}/>
+                </div>
+                <div className="form-group">
+                    <label>email: </label>
+                    <input required type="text" name="email" value={userValues.email} onChange={handleNewInput}/>
+                </div>
+                <div className="form-group">
+                    <label>password: </label>
+                    <input required type="text" name="password" value={userValues.password} onChange={handleNewInput}/>
                 </div>
                 <div className="form-group">
                     <input type="submit" value="Create New Account" className="btn btn-primary" />

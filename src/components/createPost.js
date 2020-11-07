@@ -28,7 +28,7 @@ export default function CreatePost() {
         Axios.post(`http://localhost:3001/posts/create`, postValues)
         .then(res => console.log(res.data))
         .catch(err => console.log(err));
-        window.location = "/";
+        window.location = "/posts";
     }
 
     return(

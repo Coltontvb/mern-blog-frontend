@@ -4,22 +4,25 @@ import { Route, Switch } from 'react-router-dom';
 
 //*** Custom Components ***//
 import Navbar from './components/navbar';
-import PostList from './components/post-list';
-import EditPost from './components/edit-post';
-import CreatePost from './components/create-post';
-import CreateUser from './components/create-user';
-
+import Homepage from './components/homepage';
+import UserList from './components/indexUsers';
+import UserLogin from './components/loginUser';
+import UserRegister from './components/createUser';
+import PostList from './components/indexPosts';
+import ViewPost from './components/viewPost';
+//<Route path='/posts/:postId' component={ViewPost}></Route>
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <hr />
       <Switch>
-        <Route path='/' exact component={PostList}/>
-        <Route path='/edit/:id' component={EditPost}/>
-        <Route path='/create'component={CreatePost}/> 
-        <Route path='/user' component={CreateUser}/> 
+        <Route path='/' exact component={Homepage}></Route>
+        <Route path='/posts' exact component={PostList}></Route>
+        <Route path='/posts/:postId'><ViewPost/></Route>
+        <Route path='/users' component={UserList}></Route>
+        <Route path='/login' component={UserLogin}></Route>
+        <Route path='/register' component={UserRegister}></Route>
       </Switch> 
     </div>
   );
